@@ -4,7 +4,6 @@ This is a device controller which exposes devices such garage door opener, light
 
 ### Features:
 
-* Accessories are dynamically created when the platform is started
 * Control and monitor status of devices through API
 * Homebridge dynamic platform plugin compatible (https://github.com/IanW6374/homebridge-dynamicAPI)
 
