@@ -6,7 +6,6 @@ This is a device controller which exposes devices such garage door opener, light
 
 * Accessories are dynamically created when the platform is started
 * Control and monitor status of devices through API
-* Support of dynamic updates from accessories to support garage door state monitoring and local garage door / light activation.
 * Homebridge dynamic platform plugin compatible (https://github.com/IanW6374/homebridge-dynamicAPI)
 
 
@@ -63,11 +62,11 @@ const defaultDeviceObjects = [
 
 * GET /API/ - Shows API state
 * GET /API/DEVICES/ - Shows all devices and their current status and characteristics
-* GET /API/DEVICES/{uuid:} - Shows current status and characteristics of device with UUID = {uuid:}
+* GET /API/DEVICES/{uuid:}/ - Shows current status and characteristics of device with UUID = {uuid:}
 * GET /API/DEVICES/{uuid:}/CHARACTERISTICS/ - Shows characteristics of device with UUID = {uuid:}
 * GET /API/DEVICES/{uuid:}/CHARACTERISTICS/{char:}/ - Shows characteristic {char:} of device with UUID = {uuid:}
 
-* PATCH /API/DEVICES/{uuid:} - Updates status and characteristics of device with UUID = {uuid:}
+* PATCH /API/DEVICES/{uuid:}/ - Updates status and characteristics of device with UUID = {uuid:}
 * PATCH /API/DEVICES/{uuid:}/CHARACTERISTICS/ - Updates characteristics of device with UUID = {uuid:}
 * PATCH /API/DEVICES/{uuid:}/CHARACTERISTICS/{char:}/ - Updates characteristic {char:} of device with UUID = {uuid:}
 
@@ -76,7 +75,7 @@ const defaultDeviceObjects = [
 
 * GET / - Shows all devices configured on the Homebridge plugin.
 
-* PATCH /API/{uuid:}{char:} - Updates characteristic of accessory using the UUID field as the index
+* PATCH /API/{uuid:}/ - Updates characteristic of accessory using the UUID field as the index
 
 
 ## Test Circuit
