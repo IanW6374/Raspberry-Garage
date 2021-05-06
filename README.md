@@ -77,6 +77,7 @@ const defaultDeviceObjects = [
 * PATCH /API/{uuid:}/ - Updates characteristic of accessory using the UUID field as the index
 
 
+
 ## Test Circuit
 
 The cicuit below shows the circuit configuration for the default devices included within the index.js 
