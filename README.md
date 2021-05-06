@@ -1,12 +1,13 @@
 # Raspberry-Garage
 
-This is a Homebridge dynamic platform plugin which exposes remote light and garage door accessories through a remote API.  
+This is a device controller which exposes devices such garage door opener, lights, temperature and humidity sensors which can be controlled either via local switches or through the remote API.  
 
 ### Features:
 
 * Accessories are dynamically created when the platform is started
-* Control remote accessories through API
+* Control and monitor status of devices through API
 * Support of dynamic updates from accessories to support garage door state monitoring and local garage door / light activation.
+* Homebridge dynamic platform plugin compatible (https://github.com/IanW6374/homebridge-dynamicAPI)
 
 
 ### Optional Features:
@@ -23,7 +24,7 @@ The plugin can be installed by running the command:  sudo npm -g ??????
 
 ## Configuration
 
-The configuration of the platform can be done via the .env file.
+The configuration of the platform options can be done via the .env file.
 
 ```
 {
@@ -45,7 +46,7 @@ The configuration of the platform can be done via the .env file.
 
 ```
 
-The configuration of the devices is done within the index.js file and editing the defaultDeviceObjects array.
+The configuration of the devices is done within the index.js file by editing the defaultDeviceObjects array.
 
 ```
 const defaultDeviceObjects = [
@@ -73,13 +74,13 @@ const defaultDeviceObjects = [
 
 ## REMOTE API
 
-* GET / - Shows all devices configured on this Homebridge 
+* GET / - Shows all devices configured on the Homebridge plugin.
 
 * PATCH /API/{uuid:}{char:} - Updates characteristic of accessory using the UUID field as the index
 
 
 ## Test Circuit
 
-The cicuit below shows the circuit configuration for devices included within the index.js 
+The cicuit below shows the circuit configuration for the default devices included within the index.js 
 
 <img width="1282" alt="image" src="https://user-images.githubusercontent.com/65277075/117337337-28097280-ae95-11eb-9906-ded9d46fa6c0.png">
