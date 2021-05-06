@@ -48,8 +48,7 @@ The configuration of the platform can be done via the .env file.
 The configuration of the devices is done within the index.js file and editing the defaultDeviceObjects array.
 
 ```
-{
-            const defaultDeviceObjects = [
+const defaultDeviceObjects = [
   {name: 'GarageDoor', uuid: '1111-2222-3333-0000', type: 'Garage Door Opener', characteristics: {CurrentDoorState: 1, TargetDoorState: 1, ObstructionDetected: false}, gpio: {activeHigh: false, output: 23}},
   {name: 'GarageLight', uuid: '1111-2222-3333-0001', type: 'Lightbulb', characteristics: {On: false}, gpio: {activeHigh: false, output: 24}},
   {name: 'SecurityLight1', uuid: '1111-2222-3333-0002', type: 'Lightbulb', characteristics: {On: false, Brightness: 100, ColorTemperature: 140, Hue: 180, Saturation: 50}, gpio: {activeHigh: true, output: 25}},
@@ -57,7 +56,6 @@ The configuration of the devices is done within the index.js file and editing th
   {name: 'GarageTempSensor', uuid: '1111-2222-3333-0006', type: 'Temperature Sensor', characteristics: {StatusActive: true, CurrentTemperature: 0}},
   {name: 'GarageHumiditySensor', uuid: '1111-2222-3333-0007', type: 'Humidity Sensor', characteristics: {StatusActive: true, CurrentRelativeHumidity: 0}},
 ];
-        }
 
 ```
 ## DIRECT CONNECT API
