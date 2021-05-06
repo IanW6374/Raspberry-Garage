@@ -82,4 +82,4 @@ const defaultDeviceObjects = [
 
 The cicuit below shows the circuit configuration for devices included within the index.js 
 
-<img width="1273" alt="image" src="https://user-images.githubusercontent.com/65277075/117336840-8f72f280-ae94-11eb-92c1-52fcab408f29.png">
+<img width="1282" alt="image" src="https://user-images.githubusercontent.com/65277075/117337337-28097280-ae95-11eb-9906-ded9d46fa6c0.png">
