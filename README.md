@@ -1,6 +1,6 @@
 # Raspberry-Garage
 
-This is a device controller which exposes devices such garage door opener, lights, temperature and humidity sensors which can be controlled either via local switches or through the remote API.  
+This is a platform which controls devices such garage door opener, lights, temperature and humidity sensors via local switches or through the Direct Connect API.  
 
 ### Features:
 
@@ -22,7 +22,7 @@ The plugin can be installed by running the command:  sudo npm -g ??????
 
 ## Configuration
 
-The configuration of the platform options can be done via the .env file.
+The platform configuration options can be modified by editing the .env file.
 
 ```
 {
@@ -40,11 +40,11 @@ The configuration of the platform options can be done via the .env file.
             JWT_ISSUER = 'https://JWT-Issuer/'
             JWT_CLIENTID = '<JWT Client ID>'
             JWT_CLIENTSECRET = '<JWT Client Secret>'
-        }
+}
 
 ```
 
-The configuration of the devices is done within the index.js file by editing the defaultDeviceObjects array.
+The device configuration is contained within the index.js file and can be modified by editing the defaultDeviceObjects object.
 
 ```
 const defaultDeviceObjects = [
@@ -57,6 +57,17 @@ const defaultDeviceObjects = [
 ];
 
 ```
+
+The configuration of the GPIO startup state for individual pins can be changed by editing the "/boot/config.txt" file (Required for the 8 Relay Module)
+
+```
+
+gpio=23,24=op,dh
+
+```
+
+
+
 ## DIRECT CONNECT API
 
 * GET /API/ - Shows API state
