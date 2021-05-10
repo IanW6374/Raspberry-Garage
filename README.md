@@ -141,10 +141,10 @@ The cicuit below shows the circuit configuration for the default devices include
 The platform can be uninstalled by running the commands:-
 
 ```
-sudo systemctl daemon-reload
 sudo systemctl stop raspberry-garage
 sudo systemctl disable raspberry-garage
+rm /etc/systemd/system/raspberry-service.service
+sudo systemctl daemon-reload
 
-sudo npm uninstall raspberry-garage
-
+sudo npm uninstall -g raspberry-garage
 ```
