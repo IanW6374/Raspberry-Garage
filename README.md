@@ -17,7 +17,43 @@ This is a platform which controls devices such garage door opener, lights, tempe
 
 ## Install
 
-The plugin can be installed by running the command:  sudo npm -g ??????
+The plugin can be installed by running the command:  sudo npm -g raspberry-garage
+
+
+## Run as a Service
+
+Create file raspberry-service.service in /etc/systemd/system/
+
+```
+[Unit]
+Description=Raspberry-Garage Application
+After=network.target
+[Service]
+Type=simple
+User=pi
+ExecStart=sudo raspberry-garage
+WorkingDirectory=/home/pi/raspberry-garage
+Restart=always
+[Install]
+WantedBy=multi-user.target
+```
+
+To initiate service:-
+
+```
+sudo systemctl daemon-reload
+sudo systemctl start raspberry-garage (Start the service)
+sudo systemctl enable raspberry-garage (Run service at start-up)
+```
+
+Other service related commands: -
+
+```
+sudo systemctl stop raspberry-garage  (Stop the service)
+sudo systemctl status raspberry-garage (Status of service)
+journalctl -u raspberry-garage.service (Show logs relating to service)
+
+```
 
 
 ## Configuration
@@ -94,3 +130,15 @@ gpio=23,24=op,dh
 The cicuit below shows the circuit configuration for the default devices included within the index.js 
 
 <img width="1282" alt="image" src="https://user-images.githubusercontent.com/65277075/117337337-28097280-ae95-11eb-9906-ded9d46fa6c0.png">
+
+
+## Uninstall
+
+```
+sudo systemctl daemon-reload
+sudo systemctl stop raspberry-garage
+sudo systemctl disable raspberry-garage
+
+sudo npm uninstall raspberry-garage
+
+```
