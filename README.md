@@ -62,7 +62,7 @@ journalctl -u raspberry-garage.service (Show logs relating to service)
 
 ## Configuration
 
-The platform configuration options can be modified by editing the .env file.
+The platform configuration options can be modified by editing the .env file (Must be saved in working directory)
 
 ```
 {
