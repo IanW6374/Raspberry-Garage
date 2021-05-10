@@ -17,7 +17,11 @@ This is a platform which controls devices such garage door opener, lights, tempe
 
 ## Install
 
-The plugin can be installed by running the command:  sudo npm -g raspberry-garage
+The platform can be installed by running the command:-
+
+```
+sudo npm -g raspberry-garage
+```
 
 
 ## Run as a Service
@@ -133,6 +137,8 @@ The cicuit below shows the circuit configuration for the default devices include
 
 
 ## Uninstall
+
+The platform can be uninstalled by running the commands:-
 
 ```
 sudo systemctl daemon-reload
