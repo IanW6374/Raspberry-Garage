@@ -72,10 +72,10 @@ The platform configuration options can be modified by editing the .env file (Mus
             REMOTEAPI_REJECTINVALIDCERT = 'true'
             DIRECTCONNECTAPI_IPV4 = ''
             DIRECTCONNECTAPI_PORT = 8001
-            DIRECTCONNECTAPI_HTTPS = ''
+            DIRECTCONNECTAPI_HTTPS = 'false'
             DIRECTCONNECTAPI_HTTPSCERTPATH = '/<certificate path>/<certificate>'
-            DIRECTCONNECTAPI_HTTPSKEYPATH = '"/<private key path>/<private key>'
-            JWT = ''
+            DIRECTCONNECTAPI_HTTPSKEYPATH = '/<private key path>/<private key>'
+            JWT = 'false'
             JWT_AUDIENCE = 'https://JWT-API-Application/'
             JWT_ISSUER = 'https://JWT-Issuer/'
             JWT_CLIENTID = '<JWT Client ID>'
